@@ -1,5 +1,7 @@
 # BetterAsk
 
+![BetterAsk landing page](docs/preview.png)
+
 **AI prompt autocorrect for ChatGPT, Claude, Perplexity, and Gemini.**
 
 BetterAsk is a Chrome extension that detects vague prompts before you send them, suggests clearer versions, learns from your editing patterns, and audits AI responses after they arrive.
