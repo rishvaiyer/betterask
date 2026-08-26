@@ -29,7 +29,7 @@ Then in Chrome:
 1. You type a rough prompt in ChatGPT, Claude, Perplexity, or Gemini
 2. BetterAsk detects if it's vague or missing key context
 3. A green **✨ fix ask** pill appears near the input
-4. Click it — BetterAsk shows the original, an improved version, and why it helps
+4. Click it, BetterAsk shows the original, an improved version, and why it helps
 5. Click **Use Better Ask** to replace your text
 6. BetterAsk saves the event locally for your dashboard
 
@@ -93,24 +93,24 @@ Then in Chrome:
 
 ```
 src/
-  background/     — Service worker (background.js)
-  content/        — Injected into AI sites
-    detector.ts   — DOM detection (update selectors here when sites change)
-    dom.ts        — Site-specific helpers
-    floating-ui   — The "✨ fix ask" pill and suggestion card
-    response-audit-ui — Post-response overlay
-  popup/          — Extension popup
-  options/        — Settings page
-  dashboard/      — Local analytics dashboard
-  shared/         — All business logic
-    heuristics.ts — Local pattern-matching (works without API)
-    improve.ts    — Orchestrates heuristic + API improvement
-    api.ts        — OpenAI-compatible API calls
-    learning.ts   — Pattern detection for rule suggestions
-    responseAudit — Local + API response scoring
-    reports.ts    — Aggregates events into UsageReport
-    storage.ts    — chrome.storage.local wrapper
-    types.ts      — All TypeScript types
+  background/: Service worker (background.js)
+  content/: Injected into AI sites
+    detector.ts: DOM detection (update selectors here when sites change)
+    dom.ts: Site-specific helpers
+    floating-ui: The "✨ fix ask" pill and suggestion card
+    response-audit-ui: Post-response overlay
+  popup/: Extension popup
+  options/: Settings page
+  dashboard/: Local analytics dashboard
+  shared/: All business logic
+    heuristics.ts: Local pattern-matching (works without API)
+    improve.ts: Orchestrates heuristic + API improvement
+    api.ts: OpenAI-compatible API calls
+    learning.ts: Pattern detection for rule suggestions
+    responseAudit: Local + API response scoring
+    reports.ts: Aggregates events into UsageReport
+    storage.ts: chrome.storage.local wrapper
+    types.ts: All TypeScript types
 ```
 
 ---
@@ -125,11 +125,3 @@ npm run type-check  # TypeScript checks without building
 
 After `npm run dev` or `npm run build`, reload the extension in `chrome://extensions` to pick up changes.
 
----
-
-## Build Phases
-
-- **Phase 1 (this):** Local MVP — heuristics, rules, dashboard, no backend
-- **Phase 2:** API-enhanced rewriting + response audit improvements
-- **Phase 3:** Team features, optional backend, shared rules
-- **Phase 4:** Enterprise — SSO, RBAC, audit logs, SOC2 path
